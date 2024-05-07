@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Farm Dashboard</title>
+    <!-- Add Chart.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Precision Irrigation System</h1>
+        <h3>Agrow</h3>
+    </header>
+    <div class="container">
+        <!-- Add Crop -->
+        <div id="add-crop">
+            <button onclick="addCrop()">
+                <img src="add_crop.png" alt="Add Crop"> Add Crop
+            </button>
+        </div>
+
+        <!-- Sensor Readings -->
+        <div id="sensor-readings">
+            <h2>Sensor Readings</h2>
+            <div id="sensor-data"></div>
+        </div>
+    </div>
+    
+    <div class="container2">
+        <!-- Sensor Graph -->
+        <div id="sensor-graph">
+            <h2>Sensor Graph</h2>
+            <canvas id="sensorChart" width="400" height="200"></canvas>
+        </div>
+
+        <!-- Water Volume Graph -->
+        <div id="waterVolumeGraph">
+            <h2>Water Volume Graph</h2>
+            <canvas id="waterVolumeChart" width="400" height="200"></canvas>
+        </div>
+    </div>
+
+    <div class="container1">
+        <!-- Irrigation Control -->
+        <div id="irrigation-control">
+            <h2>Irrigation Control</h2>
+            <button onclick="toggleIrrigation()">
+                 Toggle Irrigation
+            </button>
+            <p>Status: <span id="irrigation-status">Inactive</span></p>
+        </div>
+
+        <!-- Water Flow Sensor -->
+        <div id="water-flow">
+            <h2>Water Flow Sensor</h2>
+            <p>Water Flow: <span id="flow">0</span> L/min</p>
+        </div>
+    </div>
+    <footer>
+        <p>Team Electrika</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
